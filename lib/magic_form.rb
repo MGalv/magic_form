@@ -11,7 +11,6 @@ module ActionView
         form_content = ""
         form_eval = []
         out = ""
-        form_content = ""
         options = resources.extract_options!
         resource = resources.last
         resource.attribute_names.each do |attribute|

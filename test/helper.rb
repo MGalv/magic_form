@@ -32,3 +32,10 @@ end
 
 ActionController::Base.send :include, MagicForm::Application.routes.url_helpers
 ProductsController = Class.new(ActionController::Base)
+
+::ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
+::ActiveRecord::Schema.define(:version => 1) do
+  create_table :products do |t|
+    t.column :name, :string
+  end
+end
