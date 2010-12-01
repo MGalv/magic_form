@@ -21,7 +21,7 @@ module ActionView
         end
 
         form_eval << "f.submit '#{options[:submit] || 'submit' }'"
-        out = form_for resource do |f|
+        out = form_for resources do |f|
                 form_eval.each do |c|
                   form_content << "#{eval(c)}"
                 end

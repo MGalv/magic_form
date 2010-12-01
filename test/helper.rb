@@ -28,6 +28,9 @@ end
 MagicForm::Application.routes.draw do
   match '/:controller(/:action(/:id))'
   resource :products
+  resource :admin do
+    resource :products
+  end
 end
 
 ActionController::Base.send :include, MagicForm::Application.routes.url_helpers
