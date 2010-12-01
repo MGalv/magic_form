@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "magic_form"
   gem.homepage = "http://github.com/MGalv/magic_form"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Generate a form using a specific resource}
+  gem.description = %Q{Generate a form using a specific resource}
   gem.email = "luis.galaviz@crowdint.com"
   gem.authors = ["Luis Galaviz"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

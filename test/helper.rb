@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler'
+require 'sqlite3'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
