@@ -1,14 +1,10 @@
 require 'helper'
-require 'active_record'
-require 'rails/all'
-require 'action_view/context'
-require 'rubygems'
-require 'ruby-debug'
 
 class Product < ActiveRecord::Base  
 end
 
-class TestMagicForm < Test::Unit::TestCase
+class MagicFormTest < ActionView::TestCase
+  tests ActionView::Helpers::MagicFormHelper
   
   def setup
     ::ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
@@ -22,9 +18,7 @@ class TestMagicForm < Test::Unit::TestCase
   context "having a product" do
     should "create a form with the Product attributes" do
       @product = Product.new
-      x = Class.new
-      x.send(:include, ActionView::Helpers)
-      x.new.magic_form(@product)
+      assert_equal magic_form(@product), ""
     end
   end
 end
