@@ -32,10 +32,11 @@ module ActionView
       end
     end
 
-    ActionView::Helpers.autoload :MagicFormHelper
-    ActionView::Helpers.send(:include, MagicFormHelper)
-
   end
+
+  ActionView::Helpers.autoload :MagicFormHelper
+  ActionView::Helpers.send(:include, Helpers::MagicFormHelper)
+
 end
 
 
