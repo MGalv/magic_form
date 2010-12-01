@@ -24,9 +24,12 @@ Also, you can define your own attribute layer message. Example:
 
 = raw magic_form(@user, :name => "User name: ", :submit => "Save")
 
+You can add a nested resource, like a *user* that is an *admin*. Example:
+
+= raw magic_form(:admin, @user)
+
 ## To Do
 
-* Implement nested resources compatibility.
 * Implement a *do* cycle.
 
 ## Contributing to magic_form
