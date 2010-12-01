@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/magic_form.rb",
+    "magic_form.gemspec",
     "test/helper.rb",
     "test/test_magic_form.rb"
   ]
