@@ -18,19 +18,20 @@ And install it
 
 You have to call in your view to the helper *magic_form*. Example:
 
-= raw magic_form(@user)
+= magic_form(@user)
 
 Also, you can define your own attribute layer message. Example:
 
-= raw magic_form(@user, :name => "User name: ", :submit => "Save")
+= magic_form(@user, :name => "User name: ", :submit => "Save")
 
 You can add a nested resource, like a *user* that is an *admin*. Example:
 
-= raw magic_form(:admin, @user)
+= magic_form(:admin, @user)
 
 ## To Do
 
 * Implement a *do* cycle.
+* Use a separator for each field of the form.
 
 ## Contributing to magic_form
  
