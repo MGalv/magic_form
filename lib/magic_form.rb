@@ -8,29 +8,19 @@ module ActionView
       include FormHelper
 
       def magic_form(*resources)
-        form_content = ""
-        form_eval = []
-        out = ""
         options = resources.extract_options!
         resource = resources.last
-        resource.attribute_names.each do |attribute|
-          unless attribute == "created_at" || attribute == "updated_at"
-            form_eval << "f.label '#{options[attribute.to_sym] || attribute.to_sym}'"
-            form_eval << "f.text_field :#{attribute}"
-          end
-        end
+        attributes = resource.attribute_names - ["created_at", "updated_at"]
 
-        form_eval << "f.submit '#{options[:submit] || 'submit' }'"
-        out = form_for resources do |f|
-                form_eval.each do |c|
-                  form_content << "#{eval(c)}"
-                end
-                form_content
-              end
-        out
+        form_for(resources) do |f|
+          attributes.each do |attribute|
+            concat(f.label attribute, options[attribute.to_sym])
+            concat(f.text_field attribute)
+          end
+          concat(f.submit)
+        end
       end
     end
-
   end
 
   ActionView::Helpers.autoload :MagicFormHelper
