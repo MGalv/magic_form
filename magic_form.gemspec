@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Luis Galaviz"]
-  s.date = %q{2010-12-01}
-  s.description = %q{Form builder. The laziest way to implement a Form.}
+  s.date = %q{2010-12-02}
+  s.description = %q{Form builder. The laziest way to implement a Form}
   s.email = %q{luis.galaviz@crowdint.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Generate a form using a specific resource}
+  s.summary = %q{Form builder. The laziest way to implement a Form}
   s.test_files = [
     "test/helper.rb",
     "test/test_magic_form.rb"
