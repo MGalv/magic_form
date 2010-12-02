@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Luis Galaviz"]
   s.date = %q{2010-12-01}
-  s.description = %q{Generate a form using a specific resource}
+  s.description = %q{Form builder. The laziest way to implement a Form.}
   s.email = %q{luis.galaviz@crowdint.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
